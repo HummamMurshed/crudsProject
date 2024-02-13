@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crud Operation</title>
+    <link rel="stylesheet" href="css/master.css" />
+  </head>
+  <body>
+    <!-- Start Input -->
+    <div class="container">
+      <div class="input">
+        <div class="head">
+          <h1>cruds</h1>
+          <p>product managament system</p>
+        </div>
+        <form id="input-form" action="">
+          <input placeholder="title" type="text" id="title" />
+          <div class="price">
+            <input
+              onkeyup="getTotal()"
+              type="number"
+              id="price"
+              placeholder="price"
+            />
+            <input
+              onkeyup="getTotal()"
+              type="number"
+              id="taxes"
+              placeholder="taxes"
+            />
+            <input
+              onkeyup="getTotal()"
+              type="number"
+              id="ads"
+              placeholder="ads"
+            />
+            <input
+              onkeyup="getTotal()"
+              type="number"
+              id="discount"
+              placeholder="discount"
+            />
+            <button id="total"></button>
+          </div>
+          <input placeholder="count" type="number" id="count" />
+          <input placeholder="category" type="text" id="category" />
+          <button id="submit">create</button>
+        </form>
+      </div>
+
+      <!-- End Input -->
+      <!-- Start Output -->
+      <div class="output">
+        <div class="searchblock">
+          <input
+            onkeyup="searchAll(this.value)"
+            type="text"
+            id="search"
+            placeholder="Search"
+          />
+          <div class="btnsearch">
+            <button onclick="searshByTitle()" id="searchtitle">
+              Search By Title
+            </button>
+            <button onclick="searshByCt()" id="searchtitle">
+              Search By Category
+            </button>
+          </div>
+        </div>
+        <div id="delete-all"></div>
+        <div class="response-table">
+          <table>
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Price</th>
+              <th id="taxeC">Taxes</th>
+              <th id="count">count</th>
+              <th id="ads">Ads</th>
+              <th id="disC">Discount</th>
+              <th id="totaC">total</th>
+              <th id="category">Category</th>
+              <th id="updateC">Update</th>
+              <th id="deleteC">Delete</th>
+            </tr>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+      <!-- End Output -->
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
